@@ -125,6 +125,13 @@ Before we dive into the tech, let me show you what we're building. It's a multip
 -->
 
 ---
+layout: center
+class: text-center
+---
+
+<img src="/images/cat-santa.jpg" class="mx-auto max-h-screen object-contain" />
+
+---
 layout: two-cols
 layoutClass: gap-8
 ---
