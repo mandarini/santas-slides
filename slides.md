@@ -1402,7 +1402,7 @@ Edge Functions run on Deno at the edge, close to your users. This one validates 
     <carbon-checkmark-filled class="text-3xl text-green-400"></carbon-checkmark-filled>
     <div>
       <div class="font-bold text-white">Result:</div>
-      <div class="text-sm text-green-400">100+ concurrent players, smooth!</div>
+      <div class="text-sm text-green-400">Multiple concurrent players, smooth!</div>
     </div>
   </div>
 </div>
