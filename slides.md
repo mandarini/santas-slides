@@ -948,43 +948,54 @@ Full disclosure - I actually used the Google Maps MCP to help prepare this prese
 ---
 layout: center
 class: text-center
-background: https://images.unsplash.com/photo-1512389142860-9c449e58a814?w=1920
 ---
-
-<div class="backdrop-blur-sm bg-black/60 p-12 rounded-2xl"></div>
 
 # Let's See It In Action! <span class="animate-bounce inline-block">🎮</span>
 
 <div class="text-3xl my-6 text-yellow-400 font-bold">Time to play Santa's Lost Present</div>
 
-<div class="grid grid-cols-2 gap-8 max-w-3xl mx-auto mt-6">
-  <div v-click class="flex flex-col items-center">
-    <img src="/images/qrcode.png" class="w-36 h-36 rounded-lg bg-white p-2" />
-    <div class="text-sm mt-2 text-green-400 font-mono">santas-lost.netlify.app</div>
+<div class="grid grid-cols-4 gap-6 max-w-2xl mx-auto mt-8">
+  <div v-click class="text-center">
+    <div class="w-16 h-16 mx-auto mb-2 rounded-full bg-white/10 flex items-center justify-center text-3xl">📱</div>
+    <div class="text-sm">Scan QR</div>
   </div>
-  <div class="grid grid-cols-2 gap-2">
-    <div v-click class="text-center">
-      <div class="w-12 h-12 mx-auto mb-1 rounded-full bg-white/10 flex items-center justify-center text-xl">🎅</div>
-      <div class="text-xs">Get nickname</div>
-    </div>
-    <div v-click class="text-center">
-      <div class="w-12 h-12 mx-auto mb-1 rounded-full bg-white/10 flex items-center justify-center text-xl">📍</div>
-      <div class="text-xs">Drop a pin</div>
-    </div>
-    <div v-click class="text-center">
-      <div class="w-12 h-12 mx-auto mb-1 rounded-full bg-white/10 flex items-center justify-center text-xl">🌡️</div>
-      <div class="text-xs">Watch color</div>
-    </div>
-    <div v-click class="text-center">
-      <div class="w-12 h-12 mx-auto mb-1 rounded-full bg-white/10 flex items-center justify-center text-xl">🏆</div>
-      <div class="text-xs">Win!</div>
-    </div>
+  <div v-click class="text-center">
+    <div class="w-16 h-16 mx-auto mb-2 rounded-full bg-white/10 flex items-center justify-center text-3xl">🎅</div>
+    <div class="text-sm">Get nickname</div>
+  </div>
+  <div v-click class="text-center">
+    <div class="w-16 h-16 mx-auto mb-2 rounded-full bg-white/10 flex items-center justify-center text-3xl">📍</div>
+    <div class="text-sm">Drop a pin</div>
+  </div>
+  <div v-click class="text-center">
+    <div class="w-16 h-16 mx-auto mb-2 rounded-full bg-white/10 flex items-center justify-center text-3xl">🏆</div>
+    <div class="text-sm">Win!</div>
   </div>
 </div>
 
-<div v-click class="mt-6 text-xl text-green-400">
+<div v-click class="mt-8 text-xl text-green-400">
   <carbon-trophy class="inline mr-2"></carbon-trophy>
   First to get within <span class="font-bold">1km</span> wins!
+</div>
+
+---
+layout: center
+class: text-center
+---
+
+# Scan to Play! <span class="animate-pulse inline-block">📱</span>
+
+<div class="flex flex-col items-center mt-8">
+  <img src="/images/qrcode.png" class="w-64 h-64 rounded-xl bg-white p-4 shadow-2xl" />
+  <div class="mt-6 text-3xl text-green-400 font-mono font-bold">santas-lost.netlify.app</div>
+  <div class="mt-4 text-gray-400">Open on your phone and join the hunt!</div>
+</div>
+
+<div class="absolute bottom-8 left-1/2 -translate-x-1/2 flex gap-4 text-4xl">
+  <span class="animate-bounce" style="animation-delay: 0s">🎁</span>
+  <span class="animate-bounce" style="animation-delay: 0.2s">🎄</span>
+  <span class="animate-bounce" style="animation-delay: 0.4s">🎅</span>
+  <span class="animate-bounce" style="animation-delay: 0.6s">❄️</span>
 </div>
 
 <div class="absolute bottom-4 right-4 text-sm text-white/50">18</div>
