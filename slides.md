@@ -1599,30 +1599,30 @@ background: https://images.unsplash.com/photo-1482517967863-00e15c9b44be?w=1920
 <div class="flex justify-center gap-6 my-6">
   <div class="text-center">
     <div class="text-3xl mb-1">🐦</div>
-    <div class="text-blue-400 text-sm">@psybercity</div>
+    <div class="text-blue-400 text-sm"><a href="https://x.com/psybercity" target="_blank">@psybercity</a></div>
   </div>
   <div class="text-center">
     <div class="text-3xl mb-1">🌐</div>
-    <div class="text-green-400 text-sm">psyber.city</div>
+    <div class="text-green-400 text-sm"><a href="https://psyber.city" target="_blank">psyber.city</a></div>
   </div>
   <div class="text-center">
     <div class="text-3xl mb-1"><carbon-logo-github></carbon-logo-github></div>
-    <div class="text-gray-300 text-sm">mandarini</div>
+    <div class="text-gray-300 text-sm"><a href="https://github.com/mandarini" target="_blank">mandarini</a></div>
   </div>
   <div class="text-center">
     <div class="text-3xl mb-1">👩🏻‍💻</div>
-    <div class="text-purple-400 text-sm">Supabase</div>
+    <div class="text-purple-400 text-sm"><a href="https://supabase.com" target="_blank">Supabase</a></div>
   </div>
 </div>
 
 <div class="grid grid-cols-2 gap-4 mt-6 text-sm">
   <div class="p-3 bg-white/5 rounded-lg border border-green-500/30">
     <div class="text-green-400 font-bold mb-1"><carbon-game-console class="inline mr-1"></carbon-game-console> Play the Game</div>
-    <div class="text-gray-300 font-mono">santas-lost.netlify.app</div>
+    <div class="text-gray-300 font-mono"><a href="https://santas-lost.netlify.app" target="_blank">santas-lost.netlify.app</a></div>
   </div>
   <div class="p-3 bg-white/5 rounded-lg border border-blue-500/30">
     <div class="text-blue-400 font-bold mb-1"><carbon-presentation-file class="inline mr-1"></carbon-presentation-file> These Slides</div>
-    <div class="text-gray-300 font-mono">santas-slides.netlify.app</div>
+    <div class="text-gray-300 font-mono"><a href="https://santas-slides.netlify.app" target="_blank">santas-slides.netlify.app</a></div>
   </div>
 </div>
 
