@@ -978,6 +978,13 @@ class: text-center
   First to get within <span class="font-bold">1km</span> wins!
 </div>
 
+<div class="absolute bottom-8 left-1/2 -translate-x-1/2 flex gap-4 text-4xl">
+  <span class="animate-bounce" style="animation-delay: 0s">🎁</span>
+  <span class="animate-bounce" style="animation-delay: 0.2s">🎄</span>
+  <span class="animate-bounce" style="animation-delay: 0.4s">🎅</span>
+  <span class="animate-bounce" style="animation-delay: 0.6s">❄️</span>
+</div>
+
 ---
 layout: center
 class: text-center
@@ -991,12 +998,6 @@ class: text-center
   <div class="mt-4 text-gray-400">Open on your phone and join the hunt!</div>
 </div>
 
-<div class="absolute bottom-8 left-1/2 -translate-x-1/2 flex gap-4 text-4xl">
-  <span class="animate-bounce" style="animation-delay: 0s">🎁</span>
-  <span class="animate-bounce" style="animation-delay: 0.2s">🎄</span>
-  <span class="animate-bounce" style="animation-delay: 0.4s">🎅</span>
-  <span class="animate-bounce" style="animation-delay: 0.6s">❄️</span>
-</div>
 
 <div class="absolute bottom-4 right-4 text-sm text-white/50">18</div>
 
