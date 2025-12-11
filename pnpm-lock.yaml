@@ -20,6 +20,13 @@ importers:
       vue:
         specifier: ^3.5.25
         version: 3.5.25(typescript@5.9.3)
+    devDependencies:
+      '@iconify-json/carbon':
+        specifier: ^1.2.15
+        version: 1.2.15
+      '@iconify-json/logos':
+        specifier: ^1.2.10
+        version: 1.2.10
 
 packages:
 
@@ -348,6 +355,9 @@ packages:
 
   '@iconify-json/carbon@1.2.15':
     resolution: {integrity: sha512-9tW0nZY5QtKkMhuYzW09BM1345SyXNuA+gx2ub0j/fnfHOD5XVimMJ/D76H3tTez25NJbPYCLIQoFhvJc1HVBQ==}
+
+  '@iconify-json/logos@1.2.10':
+    resolution: {integrity: sha512-qxaXKJ6fu8jzTMPQdHtNxlfx6tBQ0jXRbHZIYy5Ilh8Lx9US9FsAdzZWUR8MXV8PnWTKGDFO4ZZee9VwerCyMA==}
 
   '@iconify-json/ph@1.2.2':
     resolution: {integrity: sha512-PgkEZNtqa8hBGjHXQa4pMwZa93hmfu8FUSjs/nv4oUU6yLsgv+gh9nu28Kqi8Fz9CCVu4hj1MZs9/60J57IzFw==}
@@ -2917,6 +2927,10 @@ snapshots:
   '@floating-ui/utils@0.2.10': {}
 
   '@iconify-json/carbon@1.2.15':
+    dependencies:
+      '@iconify/types': 2.0.0
+
+  '@iconify-json/logos@1.2.10':
     dependencies:
       '@iconify/types': 2.0.0
 

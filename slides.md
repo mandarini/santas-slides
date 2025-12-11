@@ -32,6 +32,8 @@ mdc: true
   <span class="animate-bounce inline-block" style="animation-delay: 0.5s">🎁</span>
 </div>
 
+<div class="absolute bottom-4 right-4 text-sm text-white/50">1</div>
+
 <!--
 Quick intro - I'm Katerina, working at Supabase, and I'm a GDE for both Angular and Google Maps. Today we're combining two of my favorite technologies to build something festive and fun - a real-time Christmas treasure hunt game!
 -->
@@ -54,7 +56,7 @@ class: my-cool-content-on-the-left
 
 - <logos-supabase-icon></logos-supabase-icon> Software Engineer at **Supabase**
 - <logos-google-maps></logos-google-maps> **Google Developer Expert** for Angular & Maps
-- <twemoji-cat></twemoji-cat> Loves cats, chocolate, and being on stage
+- 🐱 Loves cats, chocolate, and being on stage
 - <carbon-globe></carbon-globe> psyber.city | @psybercity
 
 </v-clicks>
@@ -70,6 +72,8 @@ class: my-cool-content-on-the-left
   -webkit-text-fill-color: transparent;
 }
 </style>
+
+<div class="absolute bottom-4 right-4 text-sm text-white/50">2</div>
 
 <!--
 Quick intro - I'm Katerina, working at Supabase, and I'm a GDE for both Angular and Google Maps. Today we're combining two of my favorite technologies to build something festive and fun - a real-time Christmas treasure hunt game!
@@ -112,6 +116,8 @@ class: text-center
     <div class="text-sm text-gray-400">Normal, Elf, Polygon Hunt</div>
   </div>
 </div>
+
+<div class="absolute bottom-4 right-4 text-sm text-white/50">3</div>
 
 <!--
 Before we dive into the tech, let me show you what we're building. It's a multiplayer game where everyone in this room can play simultaneously. You'll see how Supabase and Google Maps work together to create a smooth, real-time experience.
@@ -166,6 +172,8 @@ The **open-source** Postgres development platform developers love
     </div>
   </div>
 </div>
+
+<div class="absolute bottom-4 right-4 text-sm text-white/50">4</div>
 
 <!--
 For those new to Supabase - it's everything you need for a backend, built on top of Postgres. The key difference from other platforms? It's all open source, which means you can self-host or migrate anytime. No lock-in. And because it uses standard Postgres, you get 30+ years of database stability and all the extensions you could want.
@@ -227,6 +235,8 @@ For those new to Supabase - it's everything you need for a backend, built on top
 
 </div>
 
+<div class="absolute bottom-4 right-4 text-sm text-white/50">5</div>
+
 <!--
 Here's what you get with Supabase. For our game today, we're using three key features: Realtime for live updates, Edge Functions for game logic validation, and PostGIS for geospatial queries. But the beauty is - all of this runs locally too. Same Docker images. That's production parity you can trust.
 -->
@@ -282,6 +292,8 @@ Here's what you get with Supabase. For our game today, we're using three key fea
   </div>
 </div>
 
+<div class="absolute bottom-4 right-4 text-sm text-white/50">6</div>
+
 <!--
 Let me break down the three Supabase features powering our game. Realtime gives us instant updates - when anyone drops a pin, everyone sees it immediately. Edge Functions handle the game logic - we can't trust the client to calculate distances fairly! And PostGIS is Postgres's geospatial extension - it's incredibly efficient for location-based queries.
 -->
@@ -328,9 +340,7 @@ const channel = supabase
         <span class="text-blue-400">🗄️</span>
       </div>
     </div>
-
     <div class="text-center text-sm text-gray-400">Player submits guess</div>
-
     <div class="flex items-center gap-3">
       <div class="w-12 h-12 rounded-full bg-blue-500/20 flex items-center justify-center">
         <span class="text-blue-400">🗄️</span>
@@ -340,9 +350,7 @@ const channel = supabase
         <span class="text-yellow-400">⚡</span>
       </div>
     </div>
-
     <div class="text-center text-sm text-gray-400">Realtime broadcasts</div>
-
     <div class="flex items-center gap-3">
       <div class="w-12 h-12 rounded-full bg-yellow-500/20 flex items-center justify-center">
         <span class="text-yellow-400">⚡</span>
@@ -360,10 +368,11 @@ const channel = supabase
         </div>
       </div>
     </div>
-
     <div class="text-center text-sm text-gray-400">All players update instantly!</div>
   </div>
 </div>
+
+<div class="absolute bottom-4 right-4 text-sm text-white/50">7</div>
 
 <!--
 Here's how simple Realtime is. You subscribe to changes on your database tables, and Supabase streams them to you via WebSockets. Under the hood, it's using Postgres logical replication - the same technology that powers database replicas. When a player submits a guess, it hits our Edge Function, gets stored in Postgres, and Realtime broadcasts it to everyone instantly.
@@ -420,6 +429,8 @@ WHERE ST_Distance(
   </div>
 </div>
 
+<div class="absolute bottom-4 right-4 text-sm text-white/50">8</div>
+
 <!--
 PostGIS is a game-changer for location-based apps. Instead of storing lat/long as two decimal fields, you store them as a geography type. PostGIS can then use spatial indexes to query millions of points efficiently. For our game, we use it to calculate distances from the target and check if points fall within a polygon.
 -->
@@ -445,6 +456,8 @@ background: https://images.unsplash.com/photo-1569336415962-a4bd9f69cd83?w=1920
 </div>
 
 </div>
+
+<div class="absolute bottom-4 right-4 text-sm text-white/50">9</div>
 
 <!--
 Okay, now for the fun part - Google Maps Platform! Most developers know Google Maps for basic map display, but it's evolved into an incredibly powerful platform. Let me show you what's possible.
@@ -495,6 +508,8 @@ Okay, now for the fun part - Google Maps Platform! Most developers know Google M
 </div>
 
 </div>
+
+<div class="absolute bottom-4 right-4 text-sm text-white/50">10</div>
 
 <!--
 Google Maps Platform has evolved dramatically. You can render photorealistic 3D cities, create custom styled maps that match your brand, add interactive 3D objects with WebGL, and now even integrate with AI through Vertex AI and Model Context Protocol. Let's dive into the features we're using in the game.
@@ -552,7 +567,6 @@ markerContent.style.background =
         <div class="absolute top-1/4 left-1/4 w-32 h-32 border border-gray-500 rounded"></div>
         <div class="absolute top-1/3 left-1/3 w-20 h-20 border border-gray-500"></div>
       </div>
-
       <!-- Markers with gradient colors -->
       <div class="absolute top-8 left-12 w-8 h-8 rounded-full bg-blue-500 flex items-center justify-center text-xs font-bold shadow-lg animate-bounce" style="animation-duration: 2s">
         <span class="text-white">🧊</span>
@@ -570,12 +584,13 @@ markerContent.style.background =
         <span>🎁</span>
       </div>
     </div>
-
     <div class="mt-4 text-center text-sm text-gray-400">
       Blue = Cold | Red = Hot!
     </div>
   </div>
 </div>
+
+<div class="absolute bottom-4 right-4 text-sm text-white/50">11</div>
 
 <!--
 Advanced Markers let you use HTML and CSS for your map markers. In our game, each player gets a marker with their nickname, and the background color changes from blue to red based on how close they are to the target. It's all hardware-accelerated, so even with 100 players, it stays smooth.
@@ -638,6 +653,8 @@ const isInside = google.maps.geometry
   </div>
 </div>
 
+<div class="absolute bottom-4 right-4 text-sm text-white/50">12</div>
+
 <!--
 The Geometry library handles the math so you don't have to. For distance-based gameplay, we use computeDistanceBetween which uses the Haversine formula - it accounts for Earth's curvature. For Polygon Hunt mode, containsLocation checks if a point is inside our gift-shaped polygon. Both are incredibly fast and accurate.
 -->
@@ -680,6 +697,8 @@ webglOverlay.onDraw = ({ gl, transformer }) => {
     <div class="text-sm">Visualizations</div>
   </div>
 </div>
+
+<div class="absolute bottom-4 right-4 text-sm text-white/50">13</div>
 
 <!--
 This is where it gets really cool. WebGL Overlay View lets you add custom 3D graphics to your map. When someone wins our game, we show a 3D rotating present at the target location using Three.js. The transformer function georegister your 3D objects so they stay locked to map coordinates as users pan and zoom.
@@ -756,6 +775,8 @@ const map = new google.maps.Map(
   </div>
 </div>
 
+<div class="absolute bottom-4 right-4 text-sm text-white/50">14</div>
+
 <!--
 Map IDs let you create custom styled maps in the Cloud Console and reference them by ID. Want a Christmas theme? Change colors to red and green, add snow effect - all visual, no code. The best part? You can update the style and every app using that Map ID picks up the changes automatically. No redeployment needed.
 -->
@@ -810,6 +831,8 @@ map3d.flyCameraAround({
 
 </div>
 
+<div class="absolute bottom-4 right-4 text-sm text-white/50">15</div>
+
 <!--
 3D Maps use Google's photorealistic 3D tiles - actual imagery draped over 3D building models. You can fly through cities, tilt and rotate the camera, and create cinematic experiences. I'm using this for a bonus demo where we fly around Spitalfields Market in London. It's the same technology behind Google Earth, now available in your web apps.
 -->
@@ -858,6 +881,8 @@ map3d.flyCameraAround({
   <carbon-idea class="text-yellow-400 text-2xl inline mr-2"></carbon-idea>
   <span class="text-lg">The future: AI that <span class="text-yellow-400 font-bold">understands geography and location context</span></span>
 </div>
+
+<div class="absolute bottom-4 right-4 text-sm text-white/50">16</div>
 
 <!--
 This is the future of development. Google Maps now has MCP integration - that's Model Context Protocol - which lets AI assistants like Claude access official Google Maps documentation in real-time. Instead of hoping the AI's training data is current, it can fetch the latest docs. Combined with Vertex AI grounding, you can build AI apps that understand geography and location context.
@@ -913,6 +938,8 @@ documentation on:
   </div>
 </div>
 
+<div class="absolute bottom-4 right-4 text-sm text-white/50">17</div>
+
 <!--
 Full disclosure - I actually used the Google Maps MCP to help prepare this presentation! Instead of digging through docs, I asked Claude to retrieve information about specific features, and it pulled the latest documentation, complete with code samples. It's like having a Google Maps expert sitting next to you while you code.
 -->
@@ -958,6 +985,8 @@ background: https://images.unsplash.com/photo-1512389142860-9c449e58a814?w=1920
 </div>
 
 </div>
+
+<div class="absolute bottom-4 right-4 text-sm text-white/50">18</div>
 
 <!--
 Alright, let's play! Everyone grab your phones and scan this QR code. You'll be assigned a festive nickname - something like JollyElfHunter or FrostyGiftSeeker. Once you're in, tap anywhere on the map to place your guess. Your marker will change color - blue means cold, red means hot. The target is somewhere in London. Who can find it first?
@@ -1027,6 +1056,8 @@ flowchart TD
 
 </div>
 
+<div class="absolute bottom-4 right-4 text-sm text-white/50">19</div>
+
 <!--
 Let me show you what's happening under the hood. When you tap the map, your guess goes to a Supabase Edge Function that validates it and calculates the distance using PostGIS. That gets stored in Postgres, and Realtime broadcasts the update to everyone - including the admin dashboard I'm showing on the big screen. Google Maps renders all the markers with their color-coded distances.
 -->
@@ -1073,6 +1104,8 @@ Let me show you what's happening under the hood. When you tap the map, your gues
   <carbon-code class="inline mr-1"></carbon-code> Polygon Hunt uses <code class="text-purple-400">containsLocation()</code> for boundary checking
 </div>
 
+<div class="absolute bottom-4 right-4 text-sm text-white/50">20</div>
+
 <!--
 We have three game modes. Normal is straightforward - find the fixed location. Elf Mode is chaos - the target randomly moves every 20 seconds using a pg_cron job in Postgres. And Polygon Hunt is collaborative - there's a hidden gift-shaped polygon, and when 10 players get inside it, everyone wins together. The polygon gradually becomes visible as more players find it.
 -->
@@ -1115,6 +1148,8 @@ export function getMarkerColor(distanceM: number): string {
     <span class="text-sm">Far (240°)</span>
   </div>
 </div>
+
+<div class="absolute bottom-4 right-4 text-sm text-white/50">21</div>
 
 <!--
 Here's how we calculate distances. Google Maps Geometry library does the heavy lifting with computeDistanceBetween - it uses spherical geometry to get accurate distances on Earth's surface. Then we map that to a color gradient: close = 0 degrees (red), far = 240 degrees (blue). Simple HSL color math gives us a smooth transition.
@@ -1176,6 +1211,8 @@ function generateGiftPolygon(
 
 </div>
 
+<div class="absolute bottom-4 right-4 text-sm text-white/50">22</div>
+
 <!--
 For Polygon Hunt mode, we use the geometry library's containsLocation function. It implements the ray casting algorithm - draws a ray from your point to infinity and counts how many times it crosses the polygon edges. Odd number = inside. We generate a gift-box shape with a decorative bow programmatically from a center point.
 -->
@@ -1215,6 +1252,8 @@ export function createPresentOverlay({ map, position }) {
   🎁
 </div>
 
+<div class="absolute bottom-4 right-4 text-sm text-white/50">23</div>
+
 <!--
 The winner celebration uses WebGL Overlay View with Three.js. When someone wins, we spawn a 3D present model at the target location. The key is the transformer.fromLatLngAltitude function - it returns a projection matrix that maps 3D world coordinates to lat/lng/altitude. This keeps the present locked to the map location as you pan and zoom.
 -->
@@ -1250,6 +1289,8 @@ useEffect(() => {
   <carbon-information class="text-yellow-400 inline mr-2"></carbon-information>
   <strong>Automatic cleanup</strong> when component unmounts - Supabase handles WebSocket teardown
 </div>
+
+<div class="absolute bottom-4 right-4 text-sm text-white/50">24</div>
 
 <!--
 Supabase Realtime is dead simple. Subscribe to table changes, get callbacks with the new data. The beauty is cleanup - when your React component unmounts, you remove the channel, and Supabase handles tearing down the WebSocket. Under the hood, it's using Postgres logical replication and replication slots to stream changes.
@@ -1288,6 +1329,8 @@ Deno.serve(async (req) => {
 <div v-click class="absolute bottom-4 right-4 text-sm text-gray-400">
   <carbon-globe class="inline mr-1 text-purple-400"></carbon-globe> Runs on Deno at the edge, close to your users
 </div>
+
+<div class="absolute bottom-4 right-4 text-sm text-white/50">25</div>
 
 <!--
 Edge Functions run on Deno at the edge, close to your users. This one validates guesses, calculates distances server-side (so players can't cheat), and stores the result. The upsert triggers a Realtime broadcast to all connected clients. It's TypeScript, it's fast, and it scales automatically.
@@ -1355,6 +1398,8 @@ Edge Functions run on Deno at the edge, close to your users. This one validates 
 
 </div>
 
+<div class="absolute bottom-4 right-4 text-sm text-white/50">26</div>
+
 <!--
 Performance was a key concern. PostGIS spatial indexes let us query thousands of guesses instantly. Advanced Markers use the GPU for rendering. Realtime uses a binary protocol over WebSocket, not JSON over HTTP polling. And Edge Functions run in 15+ global regions, so there's always one close to your users. The result? We can handle a full conference room playing simultaneously.
 -->
@@ -1403,6 +1448,8 @@ Performance was a key concern. PostGIS spatial indexes let us query thousands of
   <carbon-idea class="text-yellow-400 inline mr-2"></carbon-idea>
   <span class="text-lg">The game is just a <span class="text-yellow-400 font-bold">fun demo</span> of production-ready capabilities!</span>
 </div>
+
+<div class="absolute bottom-4 right-4 text-sm text-white/50">27</div>
 
 <!--
 Everything we built today applies to real production apps. Delivery companies use this exact stack for live driver tracking. Real estate platforms use PostGIS for "search by map" features. Field service companies dispatch techs using the same Realtime + geospatial combo. The game is just a fun way to demonstrate the capabilities.
@@ -1453,6 +1500,8 @@ layout: center
 </div>
 
 </div>
+
+<div class="absolute bottom-4 right-4 text-sm text-white/50">28</div>
 
 <!--
 Let's wrap up with the big picture. Supabase gives you a complete backend that's production-ready from day one. Google Maps Platform is way more than just displaying a map - it's 3D rendering, custom graphics, accurate geometry. Together, they let you build multiplayer geospatial experiences that just work. And you can start building today!
@@ -1505,6 +1554,8 @@ Let's wrap up with the big picture. Supabase gives you a complete backend that's
 
 </div>
 
+<div class="absolute bottom-4 right-4 text-sm text-white/50">29</div>
+
 <!--
 All the docs are linked here. The Google Maps MCP toolkit is open source on GitHub - you can use it with Claude, Cursor, or any MCP-compatible tool. And I'll share the code for this game so you can learn from it or build your own variant. Questions?
 -->
@@ -1550,6 +1601,8 @@ background: https://images.unsplash.com/photo-1482517967863-00e15c9b44be?w=1920
 </div>
 
 </div>
+
+<div class="absolute bottom-4 right-4 text-sm text-white/50">30</div>
 
 <!--
 That's it! Thank you for playing along and being such a great audience. The combination of Supabase and Google Maps Platform opens up so many possibilities - multiplayer games, real-time tracking, collaborative mapping, and more. I'd love to answer any questions you have about the tech, the architecture, or how to get started building something similar!
@@ -1605,6 +1658,8 @@ flowchart TB
     style RT fill:#facc15,color:#000
     style Admin fill:#ef4444,color:#fff
 ```
+
+<div class="absolute bottom-4 right-4 text-sm text-white/50">31</div>
 
 <!--
 Here's the full architecture. Players connect to Supabase Edge Functions which validate and store guesses in Postgres. PostGIS handles geospatial calculations. Realtime streams changes to all connected clients. The admin dashboard uses Google Maps to visualize everything. It's a clean separation of concerns: Edge Functions for logic, Postgres for data, Realtime for sync, Google Maps for display.
@@ -1670,6 +1725,8 @@ Here's the full architecture. Players connect to Supabase Edge Functions which v
 
 </div>
 
+<div class="absolute bottom-4 right-4 text-sm text-white/50">32</div>
+
 <!--
 Important to talk about cost. Supabase's free tier is generous - perfect for demos and small apps. For Google Maps, you get $200 credit monthly which covers ~28,000 map loads. Advanced Markers don't have a separate charge, and the Geometry library is free. Using Map IDs enables caching which reduces billable map loads. Both platforms are designed to keep hobbyists and startups building without breaking the bank.
 -->
@@ -1729,6 +1786,8 @@ Important to talk about cost. Supabase's free tier is generous - perfect for dem
   <carbon-flash class="text-yellow-400 inline mr-2"></carbon-flash>
   <span class="font-bold">Result:</span> Full-stack changes in under 30 seconds from save to preview!
 </div>
+
+<div class="absolute bottom-4 right-4 text-sm text-white/50">33</div>
 
 <!--
 Pro tips from building this. Run Supabase locally with their CLI - it's the same Docker images as production. Use TypeScript everywhere for type safety. The Google Maps MCP in Claude was a lifesaver for finding current docs. And with Vite for the frontend and Supabase's dev mode, you get instant hot reload across your entire stack. Makes development incredibly smooth.
