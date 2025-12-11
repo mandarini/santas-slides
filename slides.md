@@ -1595,7 +1595,6 @@ background: https://images.unsplash.com/photo-1482517967863-00e15c9b44be?w=1920
 
 # Thank You! <span class="text-red-400">🎄</span>
 
-<div class="text-xl text-gray-300 my-4">Let's build something amazing together</div>
 
 <div class="flex justify-center gap-6 my-6">
   <div class="text-center">
