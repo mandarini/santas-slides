@@ -896,8 +896,6 @@ layoutClass: gap-8
 
 # Google Maps MCP in Action
 
-<div class="text-gray-300 mb-4">I used it to build this presentation!</div>
-
 ```text
 "Retrieve Google Maps Platform
 documentation on:
@@ -1579,33 +1577,48 @@ class: text-center
 background: https://images.unsplash.com/photo-1482517967863-00e15c9b44be?w=1920
 ---
 
-<div class="backdrop-blur-sm bg-black/60 p-12 rounded-2xl">
+<div class="backdrop-blur-sm bg-black/60 p-10 rounded-2xl">
 
 # Thank You! <span class="text-red-400">🎄</span>
 
-<div class="text-2xl text-gray-300 my-6">Let's build something amazing together</div>
+<div class="text-xl text-gray-300 my-4">Let's build something amazing together</div>
 
-<div class="flex justify-center gap-8 my-8">
+<div class="flex justify-center gap-6 my-6">
   <div class="text-center">
-    <div class="text-4xl mb-2">🐦</div>
-    <div class="text-blue-400">@psybercity</div>
+    <div class="text-3xl mb-1">🐦</div>
+    <div class="text-blue-400 text-sm">@psybercity</div>
   </div>
   <div class="text-center">
-    <div class="text-4xl mb-2">🌐</div>
-    <div class="text-green-400">psyber.city</div>
+    <div class="text-3xl mb-1">🌐</div>
+    <div class="text-green-400 text-sm">psyber.city</div>
   </div>
   <div class="text-center">
-    <div class="text-4xl mb-2">💼</div>
-    <div class="text-purple-400">Supabase</div>
+    <div class="text-3xl mb-1"><carbon-logo-github></carbon-logo-github></div>
+    <div class="text-gray-300 text-sm">mandarini</div>
+  </div>
+  <div class="text-center">
+    <div class="text-3xl mb-1">👩🏻‍💻</div>
+    <div class="text-purple-400 text-sm">Supabase</div>
   </div>
 </div>
 
-<div class="text-xl font-bold text-yellow-400 mt-8">
+<div class="grid grid-cols-2 gap-4 mt-6 text-sm">
+  <div class="p-3 bg-white/5 rounded-lg border border-green-500/30">
+    <div class="text-green-400 font-bold mb-1"><carbon-game-console class="inline mr-1"></carbon-game-console> Play the Game</div>
+    <div class="text-gray-300 font-mono">santas-lost.netlify.app</div>
+  </div>
+  <div class="p-3 bg-white/5 rounded-lg border border-blue-500/30">
+    <div class="text-blue-400 font-bold mb-1"><carbon-presentation-file class="inline mr-1"></carbon-presentation-file> These Slides</div>
+    <div class="text-gray-300 font-mono">santas-slides.netlify.app</div>
+  </div>
+</div>
+
+<div class="text-lg font-bold text-yellow-400 mt-6">
   <carbon-help class="inline mr-2"></carbon-help>
   Questions?
 </div>
 
-<div class="mt-8 text-6xl">
+<div class="mt-4 text-4xl">
   <span class="animate-bounce inline-block">🎅</span>
   <span class="animate-pulse inline-block mx-2">❄️</span>
   <span class="animate-bounce inline-block" style="animation-delay: 0.3s">🎁</span>
@@ -1619,63 +1632,6 @@ background: https://images.unsplash.com/photo-1482517967863-00e15c9b44be?w=1920
 
 <!--
 That's it! Thank you for playing along and being such a great audience. The combination of Supabase and Google Maps Platform opens up so many possibilities - multiplayer games, real-time tracking, collaborative mapping, and more. I'd love to answer any questions you have about the tech, the architecture, or how to get started building something similar!
--->
-
----
-layout: center
----
-
-# Bonus: Architecture Diagram <carbon-diagram class="inline text-blue-400"></carbon-diagram>
-
-```mermaid {scale: 0.65, theme: 'dark'}
-flowchart TB
-    subgraph Players ["📱 Player Devices (Mobile Web)"]
-        P1[React UI]
-        P2[Google Maps JS API]
-        P3[Supabase Client]
-    end
-
-    subgraph Edge ["⚡ Supabase Edge Functions (Deno)"]
-        E1[submit_guess]
-        E2[assign_nickname]
-        E3[admin_actions]
-    end
-
-    subgraph DB ["🐘 Supabase Postgres + PostGIS"]
-        D1[players table]
-        D2[rounds table]
-        D3[guesses table]
-        D4[pg_cron jobs]
-    end
-
-    subgraph RT ["📡 Supabase Realtime"]
-        R1[WebSocket broadcasts]
-        R2[Postgres replication]
-    end
-
-    subgraph Admin ["🖥️ Admin Dashboard"]
-        A1[Google Maps visualization]
-        A2[WebGL 3D present]
-        A3[Real-time leaderboard]
-    end
-
-    Players --> Edge
-    Edge --> DB
-    DB --> RT
-    RT --> Players
-    RT --> Admin
-
-    style Players fill:#4ade80,color:#000
-    style Edge fill:#a855f7,color:#fff
-    style DB fill:#3b82f6,color:#fff
-    style RT fill:#facc15,color:#000
-    style Admin fill:#ef4444,color:#fff
-```
-
-<div class="absolute bottom-4 right-4 text-sm text-white/50">31</div>
-
-<!--
-Here's the full architecture. Players connect to Supabase Edge Functions which validate and store guesses in Postgres. PostGIS handles geospatial calculations. Realtime streams changes to all connected clients. The admin dashboard uses Google Maps to visualize everything. It's a clean separation of concerns: Edge Functions for logic, Postgres for data, Realtime for sync, Google Maps for display.
 -->
 
 ---
@@ -1762,42 +1718,21 @@ Important to talk about cost. Supabase's free tier is generous - perfect for dem
 </div>
 
 <div v-click class="flex items-center gap-4 p-4 bg-white/5 rounded-lg">
-  <div class="w-10 h-10 rounded-full bg-blue-500/20 flex items-center justify-center text-xl">2</div>
-  <div>
-    <span class="font-bold text-blue-400">Use TypeScript</span>
-    <span class="text-gray-300"> - Type safety across frontend, Edge Functions, and Supabase client</span>
-  </div>
-</div>
-
-<div v-click class="flex items-center gap-4 p-4 bg-white/5 rounded-lg">
-  <div class="w-10 h-10 rounded-full bg-purple-500/20 flex items-center justify-center text-xl">3</div>
+  <div class="w-10 h-10 rounded-full bg-purple-500/20 flex items-center justify-center text-xl">2</div>
   <div>
     <span class="font-bold text-purple-400">Google Maps MCP</span>
-    <span class="text-gray-300"> - Ask Claude for code samples and best practices</span>
+    <span class="text-gray-300"> - Ask your AI assistant for code samples and best practices</span>
   </div>
 </div>
 
 <div v-click class="flex items-center gap-4 p-4 bg-white/5 rounded-lg">
-  <div class="w-10 h-10 rounded-full bg-yellow-500/20 flex items-center justify-center text-xl">4</div>
+  <div class="w-10 h-10 rounded-full bg-yellow-500/20 flex items-center justify-center text-xl">3</div>
   <div>
     <span class="font-bold text-yellow-400">Supabase CLI</span>
     <span class="text-gray-300"> - Migrations, type generation, testing all from terminal</span>
   </div>
 </div>
 
-<div v-click class="flex items-center gap-4 p-4 bg-white/5 rounded-lg">
-  <div class="w-10 h-10 rounded-full bg-cyan-500/20 flex items-center justify-center text-xl">5</div>
-  <div>
-    <span class="font-bold text-cyan-400">Hot reload everything</span>
-    <span class="text-gray-300"> - Vite for frontend, Supabase dev mode for functions</span>
-  </div>
-</div>
-
-</div>
-
-<div v-click class="mt-6 text-center p-3 bg-gradient-to-r from-green-900/50 to-cyan-900/50 rounded-lg border border-green-500/50">
-  <carbon-flash class="text-yellow-400 inline mr-2"></carbon-flash>
-  <span class="font-bold">Result:</span> Full-stack changes in under 30 seconds from save to preview!
 </div>
 
 <div class="absolute bottom-4 right-4 text-sm text-white/50">33</div>
