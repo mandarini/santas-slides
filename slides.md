@@ -40,7 +40,7 @@ Quick intro - I'm Katerina, working at Supabase, and I'm a GDE for both Angular 
 
 ---
 layout: image-right
-image: https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?w=800
+image: /images/cats.jpg
 class: my-cool-content-on-the-left
 ---
 
@@ -57,7 +57,7 @@ class: my-cool-content-on-the-left
 - <logos-supabase-icon></logos-supabase-icon> Software Engineer at **Supabase**
 - <logos-google-maps></logos-google-maps> **Google Developer Expert** for Angular & Maps
 - 🐱 Loves cats, chocolate, and being on stage
-- <carbon-globe></carbon-globe> psyber.city | @psybercity
+- <carbon-globe></carbon-globe> psyber.city | @psybercity | psyber.city
 
 </v-clicks>
 
@@ -86,13 +86,14 @@ class: text-center
 
 # What We're Building Today
 
-<div class="text-6xl my-8 animate-pulse">
-  🎁
+<div class="flex items-center justify-center gap-6 my-6">
+  <img src="/images/cat-santa.jpg" class="w-32 h-32 rounded-full object-cover border-4 border-red-500 shadow-lg shadow-red-500/30" />
+  <div class="text-left">
+    <h2 class="!text-3xl text-green-400 mb-2">Santa's Lost Present</h2>
+    <div class="text-lg text-gray-300">A real-time multiplayer geospatial treasure hunt</div>
+    <div class="text-sm text-gray-500 mt-1 italic">Help this Santa cat find his gift!</div>
+  </div>
 </div>
-
-<h2 class="!text-3xl text-green-400 mb-6">Santa's Lost Present</h2>
-
-<div class="text-xl text-gray-300 mb-8">A real-time multiplayer geospatial treasure hunt</div>
 
 <div class="grid grid-cols-2 gap-6 max-w-2xl mx-auto text-left">
   <div v-click class="p-4 bg-white/5 rounded-lg border border-white/10">
@@ -950,40 +951,40 @@ class: text-center
 background: https://images.unsplash.com/photo-1512389142860-9c449e58a814?w=1920
 ---
 
-<div class="backdrop-blur-sm bg-black/60 p-12 rounded-2xl">
+<div class="backdrop-blur-sm bg-black/60 p-12 rounded-2xl"></div>
 
 # Let's See It In Action! <span class="animate-bounce inline-block">🎮</span>
 
 <div class="text-3xl my-6 text-yellow-400 font-bold">Time to play Santa's Lost Present</div>
 
-<div class="grid grid-cols-5 gap-4 max-w-3xl mx-auto mt-8">
-  <div v-click class="text-center">
-    <div class="w-16 h-16 mx-auto mb-2 rounded-full bg-white/10 flex items-center justify-center text-3xl">📱</div>
-    <div class="text-sm">Scan QR code</div>
+<div class="grid grid-cols-2 gap-8 max-w-3xl mx-auto mt-6">
+  <div v-click class="flex flex-col items-center">
+    <img src="/images/qrcode.png" class="w-36 h-36 rounded-lg bg-white p-2" />
+    <div class="text-sm mt-2 text-green-400 font-mono">santas-lost.netlify.app</div>
   </div>
-  <div v-click class="text-center">
-    <div class="w-16 h-16 mx-auto mb-2 rounded-full bg-white/10 flex items-center justify-center text-3xl">🎅</div>
-    <div class="text-sm">Get nickname</div>
-  </div>
-  <div v-click class="text-center">
-    <div class="w-16 h-16 mx-auto mb-2 rounded-full bg-white/10 flex items-center justify-center text-3xl">📍</div>
-    <div class="text-sm">Drop a pin</div>
-  </div>
-  <div v-click class="text-center">
-    <div class="w-16 h-16 mx-auto mb-2 rounded-full bg-white/10 flex items-center justify-center text-3xl">🌡️</div>
-    <div class="text-sm">Watch color</div>
-  </div>
-  <div v-click class="text-center">
-    <div class="w-16 h-16 mx-auto mb-2 rounded-full bg-white/10 flex items-center justify-center text-3xl">🏆</div>
-    <div class="text-sm">Win!</div>
+  <div class="grid grid-cols-2 gap-2">
+    <div v-click class="text-center">
+      <div class="w-12 h-12 mx-auto mb-1 rounded-full bg-white/10 flex items-center justify-center text-xl">🎅</div>
+      <div class="text-xs">Get nickname</div>
+    </div>
+    <div v-click class="text-center">
+      <div class="w-12 h-12 mx-auto mb-1 rounded-full bg-white/10 flex items-center justify-center text-xl">📍</div>
+      <div class="text-xs">Drop a pin</div>
+    </div>
+    <div v-click class="text-center">
+      <div class="w-12 h-12 mx-auto mb-1 rounded-full bg-white/10 flex items-center justify-center text-xl">🌡️</div>
+      <div class="text-xs">Watch color</div>
+    </div>
+    <div v-click class="text-center">
+      <div class="w-12 h-12 mx-auto mb-1 rounded-full bg-white/10 flex items-center justify-center text-xl">🏆</div>
+      <div class="text-xs">Win!</div>
+    </div>
   </div>
 </div>
 
-<div v-click class="mt-8 text-xl text-green-400">
+<div v-click class="mt-6 text-xl text-green-400">
   <carbon-trophy class="inline mr-2"></carbon-trophy>
   First to get within <span class="font-bold">1km</span> wins!
-</div>
-
 </div>
 
 <div class="absolute bottom-4 right-4 text-sm text-white/50">18</div>
