@@ -995,6 +995,13 @@ layout: center
 class: text-center
 ---
 
+<img src="/images/cat-elf.jpg" class="mx-auto max-h-screen object-contain" />
+
+---
+layout: center
+class: text-center
+---
+
 # Scan to Play! <span class="animate-pulse inline-block">📱</span>
 
 <div class="flex flex-col items-center mt-8">
@@ -1097,7 +1104,7 @@ Let me show you what's happening under the hood. When you tap the map, your gues
 </div>
 
 <div v-click class="p-6 bg-gradient-to-b from-green-900/40 to-transparent rounded-xl border border-green-500/30 text-center">
-  <div class="text-5xl mb-4">🧝</div>
+  <img src="/images/cat-elf.jpg" class="w-24 h-24 mx-auto mb-4 rounded-full object-cover border-4 border-green-500 shadow-lg shadow-green-500/30" />
   <h3 class="text-xl font-bold text-green-400 mb-3">Elf Mode</h3>
   <ul class="text-sm text-left text-gray-300 space-y-2">
     <li><carbon-movement class="inline text-green-400"></carbon-movement> Target moves every 20s!</li>
